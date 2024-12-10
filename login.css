@@ -1,0 +1,110 @@
+/* General Styles */
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('https://images.pexels.com/photos/719174/pexels-photo-719174.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center fixed;
+  background-size: cover;
+  color: #e0e0e0;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Login Page Styles */
+.login-container {
+  background-color: rgba(0, 0, 0, 0.5); /* Adjusted opacity */
+  border-radius: 15px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  margin: 100px auto; /* Center alignment */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  animation: slideIn 0.6s ease-out; /* Slide-in animation from the theme */
+  backdrop-filter: blur(5px); /* Reduced blur effect */
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateY(30px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.login-container h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  color: #ff6347; /* Tomato color for heading */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-container label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #555;
+  border-radius: 5px;
+  background: #333; /* Dark background for input fields */
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.login-container input:focus {
+  border-color: #ff6347; /* Highlight border on focus */
+  outline: none;
+}
+
+.login-container input[type="submit"] {
+  background-color: #4682b4; /* SteelBlue */
+  color: #fff;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.login-container input[type="submit"]:hover {
+  background-color: #5a9bd4; /* Lighter SteelBlue */
+}
+
+.login-container .login-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9rem;
+  color: #e0e0e0;
+}
+
+.login-container .login-footer a {
+  color: #ff6347; /* Tomato color for links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-container .login-footer a:hover {
+  color: #ffffff; /* White on hover */
+}

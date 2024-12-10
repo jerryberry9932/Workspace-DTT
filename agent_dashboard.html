@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="agent.css" />
+    <title>DialTap Workspace</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-left">
+          <a href="#" class="logo-container">
+            <img
+              src="data:image/png;base64,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"
+              alt="DialTap Logo"
+              class="logo"
+            />
+            <span class="company-name">DialTap Technologies</span>
+          </a>
+        </div>
+        <ul class="navbar-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#questions">Qualifying Questions</a></li>
+          <li><a href="#form">Form</a></li>
+          <li><a href="#tcpa">TCPA</a></li>
+          <li class="dropdown">
+            <a href="#rebuttals" class="dropbtn">Rebuttals</a>
+            <div class="dropdown-content">
+              <a href="#transfer">Transfer</a>
+              <a href="#already-done">Already Done</a>
+              <a href="#name">Name</a>
+              <a href="#indian">Indian</a>
+            </div>
+          </li>
+          <li><a href="#about-us">About Us</a></li>
+        </ul>
+        <div class="navbar-right">
+          <button class="btn login-btn">Login</button>
+          <button class="btn signup-btn">Sign Up</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Home Section -->
+      <section id="home" class="section">
+        <h1>Welcome to DialTap Technologies</h1>
+        <h2>Empowering Your Home Improvement Journey</h2>
+        <p>
+          We provide no-obligation estimates and inspections on various home
+          improvements, But you don’t have to purchase or decide anything over
+          this call. Because our goal is to empower you with valuable insights
+          and answers so you can make an informed decision at your own pace.
+        </p>
+        <p>
+          We can help you with an appointment and a presentation at your
+          preferred time so you can see for yourself and decide whether it’s
+          beneficial for you. But I will say no one will force you to purchase
+          anything because you will be under no obligation, and these estimate
+          is valid for one year. So, you will get plenty of time to consider
+          your options carefully and make an informed decision for your future
+          niche
+        </p>
+        <button class="btn learn-more-btn">Learn More</button>
+      </section>
+
+      <!-- Questions Section -->
+      <section id="questions" class="section">
+        <h2>Qualifying Questions</h2>
+        <ul>
+          <li>Are you the Home-owner?</li>
+          <li>What's your zip-code over there?</li>
+          <li>Are you living in a Single-family Home?</li>
+          <li>What's Your First and Last Name?</li>
+        </ul>
+      </section>
+
+      <!-- Form Section -->
+      <section id="form" class="section">
+        <h2>Fill Out This Form</h2>
+        <form
+          action="https://script.google.com/macros/s/AKfycbxf8LxM8_A3TLkn0IfKYiI3rhVT5wK2TmAT7AqPbi_Y6uikoFOZ4v4dLcmv6f2LQ423mQ/exec"
+          method="POST"
+          id="form"
+        >
+          <div class="form-group">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service:</label>
+            <input type="text" id="service" name="service" />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+
+          <div class="form-group">
+            <label for="zip-code">Zip Code:</label>
+            <input type="text" id="zip-code" name="zip-code" required />
+          </div>
+
+          <div class="form-group">
+            <label for="status">Status:</label>
+            <input type="text" name="status" id="status" />
+          </div>
+
+          <button type="submit" class="btn submit-btn">Submit</button>
+        </form>
+      </section>
+
+      <!-- TCPA Section -->
+      <section id="tcpa" class="section">
+        <h2>TCPA Compliance</h2>
+        <p>
+          Before I proceed, I'll ask for your consent. Please note, you'll need
+          to reply with a clear 'Yes' to confirm your consent. Let me explain
+          the details.
+        </p>
+        <p>
+          For quality purposes,<em>
+            "do our Home Improvement partners have your consent to contact you
+            about home improvement via email, text message, or phone? Please
+            reply 'Yes' to provide your consent. Your privacy is our top
+            priority, and we ensure compliance with all TCPA regulations."</em
+          >
+        </p>
+      </section>
+
+      <!-- Rebuttals Section -->
+      <section id="rebuttals" class="section">
+        <h2>Rebuttals</h2>
+        <div id="transfer">
+          <h3 style="color: #ff6347;">Transfer Protocol:</h3>
+          <p>
+            I’m going to transfer you to a specialist now who will assist with
+            scheduling your appointment. Please hold for a moment.
+          </p>
+          <p style="color: #ff6347;">
+            <strong><em>When transfer taking longer:</em></strong>
+          </p>
+          <p>
+            Thank you for your patience. The transfer may take a bit longer than
+            usual, but a specialist will be with you shortly. I appreciate you
+            holding on for just a moment.
+          </p>
+        </div>
+        <div class="unavailable">
+          <h3 style="color: #4682b4;">Servuce Unavailable:</h3>
+          <p>ok well unfortunately the (xxxx) service is not available right now ... as soon as  its availble we will let you know so dont be worry about that so ry8 now all we can provide you the estimates for (xxxx) so what would be you first priority out of these for the future.
+          </p>
+        </div>
+        <div id="already-done">
+          <h3 style="color: #4682b4;">Already Done:</h3>
+          <p>
+            Since estimates are valid for a year, it’s actually a perfect time
+            to have a new one, as it could help you plan any future upgrades or
+            maintenance. Even if you're not looking to start a project right
+            away, we can offer an estimate that gives you flexibility for the
+            next year. Does that sounds good to you?
+          </p>
+        </div>
+        <div id="name">
+          <h3 style="color: #4682b4;">Name:</h3>
+          <p>
+            I completely understand your concern. In order to provide an
+            accurate estimate and ensure we follow up with the correct details,
+            we do need to collect a name. This also helps us keep track of your
+            project and provide the best possible service. Could you please
+            share just your first name? It will only be used to process your
+            estimate
+          </p>
+        </div>
+        <div id="indian">
+          <h3 style="color: #4682b4;">Indian Rebuttal:</h3>
+          <p>
+            "I appreciate your feedback. I assure you, I’m here to help you with
+            your project needs. Let’s focus on finding the best solutions for
+            your home.
+          </p>
+        </div>
+      </section>
+
+      <!-- Extra Section -->
+      <section id="about-us" class="section">
+        <h2>Why Choose DialTap Technologies?</h2>
+        <p>
+          At DialTap Technologies, we pride ourselves on our commitment to
+          quality and customer satisfaction. Our team of skilled professionals
+          is dedicated to delivering exceptional results on every project. We
+          offer a wide range of services including roofing, windows, siding, and
+          more, ensuring your home’s beauty and functionality are enhanced.
+          We’re not just here to provide a service; we’re here to build lasting
+          relationships with our clients.
+        </p>
+        <p>Experience the DialTap difference today!</p>
+        <button class="btn contact-btn">Contact Us</button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy;2024 DialTap Technologies. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function submitForm(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        var form = document.getElementById("form");
+        var formData = new FormData(form);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open(
+          "POST",
+          "https://script.google.com/macros/s/AKfycbxf8LxM8_A3TLkn0IfKYiI3rhVT5wK2TmAT7AqPbi_Y6uikoFOZ4v4dLcmv6f2LQ423mQ/exec",
+          true
+        );
+
+        // Send the form data asynchronously
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            // On successful submission, reset the form (optional)
+            form.reset();
+
+            // Optionally, display a success message or perform other actions
+            alert("Form submitted successfully!");
+          }
+        };
+
+        xhr.send(formData);
+      }
+
+       // Check if agent is logged in by checking localStorage
+       if (!localStorage.getItem("agentUsername") || !localStorage.getItem("agentPassword")) {
+            window.location.href = "login.html"; // Redirect to login if not logged in
+        }
+
+        // Logout function: Clears stored credentials and redirects to login
+        function logout() {
+            localStorage.removeItem("agentUsername");
+            localStorage.removeItem("agentPassword");
+            window.location.href = "agent-login.html"; // Redirect to login after logout
+        }
+    
+    </script>
+  </body>
+</html>
